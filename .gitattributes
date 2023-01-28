@@ -1,2 +1,189 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Books - a passion for words</title>
+    <style>
+      body {
+        background: linear-gradient(
+          108.1deg,
+          rgb(167, 220, 225) 11.2%,
+          rgb(217, 239, 242) 88.9%
+        );
+      }
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .theme-button:hover {
+        background: white;
+        color: black;
+      }
+      h1 {
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      img {
+        max-width: 100%;
+      }
+      .page {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .page:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+      p {
+        font-family: "Courier New", Courier, monospace;
+        line-height: 1.5;
+      }
+
+      .ReadMe {
+        color: #8ca4da;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #c8d6ee;
+        border-radius: 40px;
+        padding: 10px;
+        background-color: #c8d6ee;
+        font-size: 16px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      button:hover {
+        background: #1e3663;
+        color: #e4e8e9;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #e4e8e9;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: #e4e8e9;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 18px;
+      }
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: #c8d6ee;
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Books</h1>
+      <h2>A passion for stories</h2>
+      <a
+        href="https://www.goodreads.com/blog/show/2431?ref=anticipated23_eb"
+        target="_blank"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/406/original/daniel-schludi-7JL7NdhaRd8-unsplash.jpg?1674663963"
+          alt=""
+          class="page"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://images.unsplash.com/photo-1542086260-ddb62f405c8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHxyZWFkaW5nJTIwYm9va3xlbnwwfDB8MHx8&auto=format&fit=crop&w=600&q=60"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/434/original/siora-photography-hgFY1mZY-Y0-unsplash.jpg?1674671486"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/425/original/ben-white-W8Qqn1PmQH0-unsplash.jpg?1674669920"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/424/original/sixteen-miles-out-GVhAezjtX-4-unsplash.jpg?1674669905"
+          alt=""
+        />
+      </div>
+      <p>
+        "Stories are an essential part of the human experience. They're a part
+        of how we communicate, learn, and connect with one another. We love to
+        hear other people's stories, and tell our own. This is no less true in
+        the world of business, where brands, products, and people, all tell a
+        story to connect with their clients." By Seth Robinson
+      </p>
+      <a
+        class="ReadMe"
+        href="https://fbe.unimelb.edu.au/newsroom/a-passion-for-story-telling"
+        >📖Continue Reading</a
+      >
+
+      <button>📚 Book suggestions</button>
+    </div>
+    <footer>Coded by Ana Branco</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
